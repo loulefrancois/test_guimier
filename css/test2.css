@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 * {
@@ -17,10 +19,6 @@
     background-origin: initial;
     background-clip: initial;
     background-color: initial;
-}
-
-body {
-    font-family: Verdana, sans-serif;
 }
 
 /* Fonts */
@@ -75,13 +73,12 @@ a {
     color: white;
 }
 
-/* Style de @benoit_gmr au hover : */
+/* Style a au hover : */
 a:hover {
     color: yellow;
 }
 
 /* Touche pas : */
-
 .hidebr,
 .hidebrtablette {
     display: none;
@@ -90,6 +87,10 @@ a:hover {
 /* //////////////////////////////////// */
 /* ////////////// SLIDES ////////////// */
 /* //////////////////////////////////// */
+
+.mySlides {
+    display: none;
+}
 
 /* Légendes des images : */
 p.legende {
@@ -104,7 +105,6 @@ p.legende {
     /* Taille de la police : */
     font-size: 1.6em;
     z-index: 1000;
-    visibility: visible;
 }
 
 /* span noir */
@@ -112,40 +112,9 @@ p.legende {
     color: black;
 }
 
-.mySlides {
-    display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Button : */
+/* //////////////////////////////////// */
+/* ////////////// BOUTONS ///////////// */
+/* //////////////////////////////////// */
 
 .button_left {
     position: fixed;
@@ -174,12 +143,93 @@ p.legende {
 }
 
 
+/* //////////////////////////////////// */
+/* //////////// RESPONSIVE //////////// */
+/* //////////////////////////////////// */
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+/* Antiquité de Guimier : */
 
-    .prev,
-    .next {
-        font-size: 11px
+@media screen and (max-width: 1280px) {
+ 
+    header p {
+        font-size: 1.4em;
+    }
+    
+    p.legende {
+        font-size: 1.4em;
+    }
+    
+}
+
+/* Tablette */
+
+@media screen and (max-width: 1024px) {
+
+    .hidebrtablette {
+        display: block;
+    }
+
+    .hidebr {
+        display: none;
+    }
+
+    header p {
+        font-size: 1em;
+        margin-left: 0.3em;
+        margin-right: 0em;
+        margin-right: 0em;
+    }
+
+    p.legende {
+        font-size: 1em;
+                margin-left: 0.3em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    
+    a.insta {
+        text-decoration: underline;
+    }
+
+}
+
+/* Portable */
+
+@media screen and (max-width: 750px) {
+
+    header p {
+        font-size: 1em;
+        margin-left: 0.55em;
+        line-height: 1.2em;
+        margin-right: 0em;
+    }
+
+    p.legende {
+        font-size: 1em;
+        line-height: 1.2em;
+        margin-left: 0.55em;
+    }
+    
+
+    a {
+        text-decoration: none;
+    }
+    
+    a.insta {
+        text-decoration: underline;
+    }
+
+    .enter {
+        visibility: hidden;
+    }
+
+    .hidebr {
+        display: block;
+    }
+
+    .hidebrtablette {
+        display: none;
     }
 }

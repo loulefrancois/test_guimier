@@ -29,7 +29,7 @@
 
     <div class="slideshow-container">
 
-        <div class="mySlides" style="background-image: url(image/accueil2.jpg);">
+        <div class="mySlides" style="background-image: url(image/accueil2.jpg); height: 30em;">
         </div>
 
         <div class="mySlides" style="background-image: url(image/velo1.jpg);">
@@ -49,6 +49,9 @@
 
 <script>
     var ecranHeight = $(window).height();
+    var ecranWidth = $(window).width();
+
+    $(".mySlides").css("width", ecranWidth);
     $(".mySlides").css("height", ecranHeight);
 </script>
 
