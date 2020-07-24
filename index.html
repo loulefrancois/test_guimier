@@ -3,7 +3,6 @@
 <html lang="fr">
 <meta charset="utf-8" />
 
-
 <head>
 
     <!-- Ce qui est écris sur l'onglet : -->
@@ -16,7 +15,7 @@
     <!-- Touche pas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- JAVASCRIPT/QUERY -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 
 </head>
@@ -68,15 +67,15 @@
         </div>
 
         <div class="mySlides" style="background-image: url(images/jpo4.jpg);">
-            <p class="legende"><span class="Italic">isdaT 2019 open days,</span> visual identity, print & web, 2019</p>
+            <p class="legende"><span class="Italic">isdaT 2019 open days,</span> visual identity, print &amp; web, 2019</p>
         </div>
 
         <div class="mySlides" style="background-image: url(images/jpo7.jpg);">
-            <p class="legende"><span class="Italic">isdaT 2019 open days,</span> visual identity, print & web, 2019</p>
+            <p class="legende"><span class="Italic">isdaT 2019 open days,</span> visual identity, print &amp; web, 2019</p>
         </div>
 
         <div class="mySlides" style="background-image: url(images/jpo13.jpg);">
-            <p class="legende"><span class="Italic">isdaT 2019 open days,</span> visual identity, print & web, 2019</p>
+            <p class="legende"><span class="Italic">isdaT 2019 open days,</span> visual identity, print &amp; web, 2019</p>
         </div>
 
         <div class="mySlides" style="background-image: url(images/passage4.jpg);">
@@ -196,6 +195,32 @@
 <!-- ////////////////////////////////// -->
 
 <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+
+    }
+
+</script>
+
+<script>
     $(document).ready(function() {
 
         // Au chargement initial   
@@ -218,8 +243,10 @@
         $("body").css("height", ecranHeight);
 
     }
+
 </script>
 
+<!--
 <script>
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -252,5 +279,6 @@
         dots[slideIndex - 1].className += " active";
     }
 </script>
-    
+-->
+
 </html>
