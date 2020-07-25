@@ -50,7 +50,7 @@ p {
 header p {
     padding-left: 1.2em;
     padding-right: 1.2em;
-    padding-top: 0.3em;
+    padding-top: 0.4em;
     /* Taille de la police du titre : */
     font-size: 1.5em;
     text-shadow: 0 0 2px black;
@@ -88,6 +88,7 @@ a:hover {
 
 .mySlides {
     display: none;
+    width: 100%;
 }
 
 /* span noir */
@@ -106,7 +107,7 @@ p.legende {
     /* interlignage : */
     line-height: 1.1em;
     /* Taille de la police : */
-    font-size: 1.6em;
+    font-size: 1.5em;
     z-index: 1000;
 }
 
@@ -150,11 +151,11 @@ p.legende {
 @media screen and (max-width: 1280px) {
 
     header p {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 
     p.legende {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
 
 }
@@ -198,14 +199,14 @@ p.legende {
 @media screen and (max-width: 750px) {
 
     header p {
-        font-size: 1em;
+        font-size: 0.94em;
         padding-left: 0.55em;
         line-height: 1.2em;
         padding-right: 0em;
     }
 
     p.legende {
-        font-size: 1em;
+        font-size: 0.94em;
         line-height: 1.2em;
         padding-left: 0.55em;
     }
