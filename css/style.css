@@ -174,14 +174,14 @@ p.legende {
 
     header p {
         font-size: 1em;
-        margin-left: 0.3em;
-        margin-right: 0em;
-        margin-right: 0em;
+        padding-left: 0.3em;
+        padding-right: 0em;
+        padding-right: 0em;
     }
 
     p.legende {
         font-size: 1em;
-        margin-left: 0.3em;
+        padding-left: 0.3em;
     }
 
     a {
@@ -200,15 +200,15 @@ p.legende {
 
     header p {
         font-size: 1em;
-        margin-left: 0.55em;
+        padding-left: 0.55em;
         line-height: 1.2em;
-        margin-right: 0em;
+        padding-right: 0em;
     }
 
     p.legende {
         font-size: 1em;
         line-height: 1.2em;
-        margin-left: 0.55em;
+        padding-left: 0.55em;
     }
 
 
